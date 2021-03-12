@@ -39,3 +39,6 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 ![Capteur](Images/Schematic_OLED.PNG)
 ![Capteur](Images/Empreinte_OLED.PNG)
 - *OLED*
+
+- Une fois les empreintes et les schématiques crées nous avons pu réaliser la schématique complète du circuit;
+![Capteur](Images/Shield-Schematic.png)
