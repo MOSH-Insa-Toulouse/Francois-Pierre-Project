@@ -49,3 +49,9 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 - Une fois la schématique finis nous avons put qllouer à chaque composants (résistance, capacité...) une empreinte. Nous avons ensuite visualisé sur l'éditeur de circuit imprimé notre PCB. Nous avons donc organisé nos composant pour qu'il tiennent sur le shield et que nous puissons router correctement et sur chaque Pin les différents modules.
 
 ![Capteur](Images/PCB_routage_Shield.PNG)
+
+### Visulaisation 3D
+
+- Pour être sur du résultat que nous voulions nous avons pu visulaiser sur Gerber notre shield en 3D avec les composant dessus, à l'execption des module bluetooth, de l'encodeur, du capteur et du LTC qui n'ont pas d'empreinte 3D.
+
+![Capteur](Images/Shield_3D.jpg)
