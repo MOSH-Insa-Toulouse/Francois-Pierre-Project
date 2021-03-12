@@ -55,3 +55,10 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 - Pour être sur du résultat que nous voulions nous avons pu visulaiser sur Gerber notre shield en 3D avec les composant dessus, à l'execption des module bluetooth, de l'encodeur, du capteur et du LTC qui n'ont pas d'empreinte 3D.
 
 ![Capteur](Images/Shield_3D.jpg)
+
+## Code Arduino Capteur
+
+- Le code arduino permet de gérer le capteur. Il récupère la tension du capteur et calcule la résistance. Il affiche sur un écran OLED différent menu en fonction de si l'on appuie ou non sur l'encodeur rotatoir.
+
+![Capteur](Images/Affiche_Resistance.jpg)
+![Capteur](Images/Affiche_Tension.jpg)
