@@ -21,6 +21,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 
 Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant sur la carte arduino sans utiliser de BradeBoard. Pour réaliser le shield nous avons d'abord duy réaliser la schématic du circuit sur Kicad. Comme la plus part de nos composant n'étais pas disponible sur les librairies de Kicad nous avons crée une libraire (voir Shield) qui contient les empreinte et schématic de tous nos composant.
 
+### Schématique et empreintes
 
 ![Capteur](Images/Schematic_Capteur.PNG)
 ![Capteur](Images/Empreinte_Capteur.PNG)
@@ -42,3 +43,9 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 
 - Une fois les empreintes et les schématiques crées nous avons pu réaliser la schématique complète du circuit;
 ![Capteur](Images/Shield-Schematic.png)
+
+### PCB routage
+
+- Une fois la schématique finis nous avons put qllouer à chaque composants (résistance, capacité...) une empreinte. Nous avons ensuite visualisé sur l'éditeur de circuit imprimé notre PCB. Nous avons donc organisé nos composant pour qu'il tiennent sur le shield et que nous puissons router correctement et sur chaque Pin les différents modules.
+
+![Capteur](Images/PCB_routage_Shield.PNG)
