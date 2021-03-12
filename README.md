@@ -26,11 +26,15 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 ![Capteur](Images/Schematic_Capteur.PNG)
 ![Capteur](Images/Empreinte_Capteur.PNG)
 
-- *Module HC-05*
+*Module HC-05*
+
 ![Capteur](Images/Schematic_HC-05.PNG)
+![Capteur](Images/Empreinte_HC-05.PNG)
 
-- *Encodeur Rotatoire*
+*Encodeur Rotatoire*
 ![Capteur](Images/Schematic_KY-040.PNG)
+![Capteur](Images/Empreinte_KY-040.PNG)
 
-- *OLED*
+*OLED*
 ![Capteur](Images/Schematic_OLED.PNG)
+![Capteur](Images/Empreinte_OLED.PNG)
