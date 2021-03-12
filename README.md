@@ -1,7 +1,12 @@
 # Fran-ois-Pierre-Project
-Projet de création d'un shield
-- Ce projet consiste a créer un shield sur Kicad
+## Livrables
+[] Shield carte Arduino
+[] Application MIT bluetooth
+[] Code Arduino capteur
+[] Datasheet
+[] Code arduino cerveau moteur
 
-## Photo
-![Photo](/Image/20190501_142702.jpg)
+
+
+
 
