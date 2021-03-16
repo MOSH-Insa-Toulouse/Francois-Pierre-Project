@@ -62,3 +62,8 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 
 ![Capteur](Images/Affiche_Resistance.jpg)
 ![Capteur](Images/Affiche_Tension.jpg)
+
+
+## Application APK
+
+- L'application permet de recevoir sur le téléphone la mesure de la résistance et de la tension délivré par le capteur. Nous affichons les deux donnés et nous tra9ons un graphique de la variation de résistance avec une échelle ajustable.
