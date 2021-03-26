@@ -1,4 +1,4 @@
-# Fran-ois-Pierre-Project
+# Francois-Pierre-Project
 ## Projet capteur graphene
 Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un capteur graphene de déformation. Le but est de mesurer la résistance et la tension du graphene sur une feuille de papier. Pour ce faire nous avons élaborer un shield PCB sur le logiciel Kicad pour placer nos différent composant sur la carte arduino Uno. Nous avons gérer notre capteur grace à un code arduino qui affiche la résistance ou la tension récupéré sur un écran OLED. Notre capteur est relié en bluetooth au téléphone grace à une module HC-05 que nous gérons via une application APK sur My App inventor.
 
@@ -11,9 +11,9 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 
 ## Livrables  
 
-- [ ] PCB shield 
-- [ ] Code Arduino gérant le capteur 
-- [ ] Application APK
+- [X] PCB shield 
+- [X] Code Arduino gérant le capteur 
+- [X] Application APK
 - [ ] Programme servo motor
 - [ ] Datasheet
 
@@ -58,7 +58,7 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 
 ## Code Arduino Capteur
 
-- Le code arduino permet de gérer le capteur. Il récupère la tension du capteur et calcule la résistance. Il affiche sur un écran OLED différent menu en fonction de si l'on appuie ou non sur l'encodeur rotatoir.
+- Le code arduino permet de gérer le capteur. Il récupère sur la pin analogique A0 la valeur de la tension du capteur. grace à une analyse du circuit éléctronique, nous pouvons déterminer la résistance en fonction de la tension. Le code affiche sur un écran OLED différents menus en fonction de si l'on appuie ou non sur l'encodeur rotatoir. Il y a un delay de 5ms entre chaque lecture analogique.
 
 ![Capteur](Images/Affiche_Resistance.jpg)
 ![Capteur](Images/Affiche_Tension.jpg)
@@ -66,4 +66,8 @@ Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant su
 
 ## Application APK
 
-- L'application permet de recevoir sur le téléphone la mesure de la résistance et de la tension délivré par le capteur. Nous affichons les deux donnés et nous tra9ons un graphique de la variation de résistance avec une échelle ajustable.
+- L'application permet de recevoir sur le téléphone la mesure de la résistance et de la tension délivré par le capteur. Nous affichons les deux donnés et nous traçons un graphique de la variation de résistance avec une échelle ajustable. La carte Arduino et plus précisement le module Bluetooth envoie un Octet de donnée au téléphone via les pins TX et RX. Cet otcet contient à la fois des valeurs de résistance et de tension séparés par de ",". Chaque doublet de valeurs est lui séparé par des ";". Notre téléphone reçois donc "49,0.39;35,0.60;70,0.37" avec d'abord la valeur de résistance puis une valeur de tension. Le téléphone sépare donc chaque valeur et les affiches. Notre application traite les données sur un intervalle de 100ms. Notre code a aussi une fonctionnalité qui enlève les variation trop importante de réstistance. En effet lors de nos tests notre téléphone recevait bien les valeurs affiché par le OLED, seulement nous avions aussi des valeurs intanpestives qui ne correspondaient pas à une mesure (entre 1 et 9). Pour pallier à ce problème,nous avons donc décider de ne pas prendre en compte les variations trop importantes. 
+
+![Capteur](Images/Code_APK_separateur.PNG)
+- *Code de l'application qui permet de séparer l'octet reçu et de séparer tension et résistance*
+- A fin de rescale notre graphique en permanance notre graphique nous avons ajouter une partie au code 
