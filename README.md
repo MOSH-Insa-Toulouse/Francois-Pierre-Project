@@ -14,8 +14,8 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 - [X] PCB shield 
 - [X] Code Arduino gérant le capteur 
 - [X] Application APK
-- [X] Programme servo motor
-- [X] Datasheet
+- [ ] Programme servo motor
+- [ ] Datasheet
 
 ## Shield 
 
