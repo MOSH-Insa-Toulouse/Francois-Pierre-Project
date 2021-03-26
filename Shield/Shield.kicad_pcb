@@ -65,7 +65,7 @@
     (pad_to_mask_clearance 0)
     (aux_axis_origin 110.998 126.365)
     (grid_origin 110.998 126.365)
-    (visible_elements 7FFFF7FF)
+    (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x300f0_fffffffe)
       (usegerberextensions false)
