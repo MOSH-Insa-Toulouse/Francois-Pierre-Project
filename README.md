@@ -1,21 +1,28 @@
 # Francois-Pierre-Project
 ## Projet capteur graphene
-Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un capteur graphene de déformation. Le but est de mesurer la résistance et la tension du graphene sur une feuille de papier. Pour ce faire nous avons élaborer un shield PCB sur le logiciel Kicad pour placer nos différent composant sur la carte arduino Uno. Nous avons gérer notre capteur grace à un code arduino qui affiche la résistance ou la tension récupéré sur un écran OLED. Notre capteur est relié en bluetooth au téléphone grace à une module HC-05 que nous gérons via une application APK sur My App inventor.
+Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un capteur graphene de déformation. Le but est de mesurer la résistance et la tension du graphene sur une feuille de papier. Pour ce faire nous avons élaborer un capteur accessible à tous et simple d'utilisation sur arduino et App Inventor. Dans ce Git vous trouverez toute les ressources et information nécéssaire pour comprendre le fonctionnement de notre capteur et pouvoir le réaliser chez vous.
 
-  - [Livrables](#livrables)
-  - [Shield](#shield)
-  - [Code Arduino Capteur](#code-arduino-capteur)
-  - [Application APK](#application-apk)
-  - [Code Arduino banc de test](#code-arduino-banc-de-test)
-  - [Datasheet](#datasheet)
+## Sommaire
 
-## Livrables  
+  - [1. Matériel requis](#1-Matériel requis)
+  - [2. Kicad](#2- Kicad)
+      - [2.1 Création des empreintes et des composants](#21-Création-des-empreintes-et-des-composants)
+      - [2.2 Création du PCB](#22-Création-du-PCB)
+  - [3. Code Arduino](#3-code-arduino)
+      - [3.1 Librairies utilisées](#31-Librairies-utilisées)
+      - [3.2 Le code](#32-Le-code)
+  - [4. Application Bluetooth](#4-application-Bluetooth)
+  - [5. Banc de test](#5-Banc-de-test)
+      - [5.1 Fonctionnement du banc](#51-Fonctionnement-du-banc)
+      - [5.2 Code arduino](#52-Code-arduino)
+  - [6. Datasheet](#6-datasheet)
 
-- [X] PCB shield 
-- [X] Code Arduino gérant le capteur 
-- [X] Application APK
-- [ ] Programme servo motor
-- [ ] Datasheet
+## Matériel requis  
+
+- PCB shield 
+- Code Arduino gérant le capteur 
+- Application APK
+
 
 ## Shield 
 
