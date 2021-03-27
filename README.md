@@ -20,7 +20,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 ## Matériel requis  
 
 - Smartphone Androide 
-- Carte Arduino Uno 
+- Carte Arduino Uno [info](https://www.arduino-france.com/review/arduino-uno/)
 - Une plaque de cuivre pour shield. Ou bien des cables de connexions
 - Papier
 - Caryon de papier
@@ -28,6 +28,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 - Un écran OLED [ici](https://www.google.com/aclk?sa=l&ai=DChcSEwjiwND8ltHvAhVc6u0KHTwOD0wYABAGGgJkZw&sig=AOD64_0E9f4FFmKPCGubT07_igBVagq6Cw&ctype=5&q=&ved=2ahUKEwi72sj8ltHvAhUSmRQKHRkPB9IQ9aACegQIARBK&adurl=)
 - Un encodeur rotatif [ici](https://www.google.com/aclk?sa=l&ai=DChcSEwi_u8-dl9HvAhXC7e0KHZQrC94YABAEGgJkZw&sig=AOD64_0jWmans1feAKcjE1r1Iod4QknEqw&ctype=5&q=&ved=2ahUKEwi5kcadl9HvAhWl8uAKHZ9SAuUQ9aACegQIARBg&adurl=)
 - Deux pince crocodile en cuivre
+- Un transistor LTC1050 [ici](https://www.reichelt.com/fr/fr/amplificateurs-op-rationnels-unique-2-5-mhz-dil-8-ltc-1050-cn8-p10921.html) 
 
 
 ## Kicad 
@@ -36,15 +37,15 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 2.1 Création des empreintes et des composants
 
+- Pour réaliser notre shield, nous avons du créer une librairie d'empreinte pour nos composants. En effet ceux ci n'étend pas disponible sur les librairies de Kicad nous avons donc créés des schémas et empreintes pour tous nos modules.
+
 ![Capteur](Images/Schematic_Capteur.PNG)
 ![Capteur](Images/Empreinte_Capteur.PNG)
 - *Capteur Graphite*
 
-
 ![Capteur](Images/Schematic_HC-05.PNG)
 ![Capteur](Images/Empreinte_HC-05.PNG)
 - *HC-05*
-
 
 ![Capteur](Images/Schematic_KY-040.PNG)
 ![Capteur](Images/Empreinte_KY-040.PNG)
@@ -54,33 +55,62 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 ![Capteur](Images/Empreinte_OLED.PNG)
 - *OLED*
 
-- Une fois les empreintes et les schématiques crées nous avons pu réaliser la schématique complète du circuit;
+![Capteur](Images/Schematic_LTC1050.PNG)
+![Capteur](Images/Empreinte_LTC1050.PNG)
+- *LTC1050*
+
+### 2.2 Création du PCB
+
+- Une fois les empreintes et les schématiques crées nous avons pu réaliser la schématique complète du circuit. Dans ce schéma vous pouvez retrouver nos modules ainsi que des composants éléctronique de base.
+
 ![Capteur](Images/Shield-Schematic.png)
+- *Schéma de notre circuit*
 
-### PCB routage
-
-- Une fois la schématique finis nous avons put qllouer à chaque composants (résistance, capacité...) une empreinte. Nous avons ensuite visualisé sur l'éditeur de circuit imprimé notre PCB. Nous avons donc organisé nos composant pour qu'il tiennent sur le shield et que nous puissons router correctement et sur chaque Pin les différents modules.
+- Une fois la schématique finis nous avons put allouer à chaque composants (résistance, capacité...) une empreinte. Nous avons ensuite visualisé sur l'éditeur de circuit imprimé notre PCB. Nous avons donc organisé nos composant pour qu'il tiennent sur le shield et que nous puissons router correctement et sur chaque pin les différents modules.
 
 ![Capteur](Images/PCB_routage_Shield.PNG)
-
-### Visulaisation 3D
 
 - Pour être sur du résultat que nous voulions nous avons pu visulaiser sur Gerber notre shield en 3D avec les composant dessus, à l'execption des module bluetooth, de l'encodeur, du capteur et du LTC qui n'ont pas d'empreinte 3D.
 
 ![Capteur](Images/Shield_3D.jpg)
 
-## Code Arduino Capteur
+## 3. Code Arduino
 
-- Le code arduino permet de gérer le capteur. Il récupère sur la pin analogique A0 la valeur de la tension du capteur. grace à une analyse du circuit éléctronique, nous pouvons déterminer la résistance en fonction de la tension. Le code affiche sur un écran OLED différents menus en fonction de si l'on appuie ou non sur l'encodeur rotatoir. Il y a un delay de 5ms entre chaque lecture analogique.
+### 3.1 Librairies utilisées
+
+- Pour réaliser notre capteur, nous utilisons [trois librairies](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Libairies%20Arduino). 
+- La librairie ["Adafruit_BusIO"](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Libairies%20Arduino/Adafruit_BusIO) qui permet de gérer le connexions en I2C et SPI
+- Les librairies ["Adafruit_GFX_Library"](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Libairies%20Arduino/Adafruit_GFX_Library) et ["Adafruit_SSD1306"](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Libairies%20Arduino/Adafruit_SSD1306)qui permet de gérer notre écran OLED.
+
+### 3.2 Le code
+
+- [Le code arduino](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Capteur_Graphene) permet de gérer le capteur. Il récupère sur la pin analogique A0 la valeur de la tension du capteur. Grace à une analyse du circuit éléctronique, nous pouvons déterminer la résistance en fonction de cette tension. Le code affiche sur un écran OLED différents menus en fonction de si l'on appuie ou non sur l'encodeur rotatoir. Il y a un delay de 5ms entre chaque lecture analogique.
 
 ![Capteur](Images/Affiche_Resistance.jpg)
 ![Capteur](Images/Affiche_Tension.jpg)
 
 
-## Application APK
+## 4. Application Bluetooth
 
-- L'application permet de recevoir sur le téléphone la mesure de la résistance et de la tension délivré par le capteur. Nous affichons les deux donnés et nous traçons un graphique de la variation de résistance avec une échelle ajustable. La carte Arduino et plus précisement le module Bluetooth envoie un Octet de donnée au téléphone via les pins TX et RX. Cet otcet contient à la fois des valeurs de résistance et de tension séparés par de ",". Chaque doublet de valeurs est lui séparé par des ";". Notre téléphone reçois donc "49,0.39;35,0.60;70,0.37" avec d'abord la valeur de résistance puis une valeur de tension. Le téléphone sépare donc chaque valeur et les affiches. Notre application traite les données sur un intervalle de 100ms. Notre code a aussi une fonctionnalité qui enlève les variation trop importante de réstistance. En effet lors de nos tests notre téléphone recevait bien les valeurs affiché par le OLED, seulement nous avions aussi des valeurs intanpestives qui ne correspondaient pas à une mesure (entre 1 et 9). Pour pallier à ce problème,nous avons donc décider de ne pas prendre en compte les variations trop importantes. 
+- [L'application](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/blob/main/TP5.apk) permet de recevoir sur le téléphone la mesure de la résistance et de la tension délivré par le capteur. Nous affichons les deux donnés et nous traçons un graphique de la variation de résistance avec une échelle ajustable. La carte Arduino et plus précisement le module Bluetooth envoie un octet de donnée au téléphone via les pins TX et RX. Cet otcet contient à la fois des valeurs de résistance et de tension séparés par de ",". Chaque doublet de valeurs est lui séparé par des ";". Notre téléphone reçois donc "49,0.39;35,0.60;70,0.37" avec d'abord la valeur de résistance puis une valeur de tension. Le téléphone sépare donc chaque valeur et les affiches. Notre application traite les données sur un intervalle de 100ms. 
 
 ![Capteur](Images/Code_APK_separateur.PNG)
 - *Code de l'application qui permet de séparer l'octet reçu et de séparer tension et résistance*
-- A fin de rescale notre graphique en permanance notre graphique nous avons ajouter une partie au code 
+
+- Notre code a aussi une fonctionnalité qui enlève les variation trop importante de réstistance. En effet lors de nos tests notre téléphone recevait bien les valeurs affiché par le OLED, seulement nous avions aussi des valeurs intanpestives qui ne correspondaient pas à une mesure (entre 1 et 9). Pour pallier à ce problème,nous avons donc décider de ne pas prendre en compte les variations trop importantes.
+
+- Pour finir nous avons rajouté une fonctionalité qui permet à l'utilisateur de zoomer ou dezoomer sur la graphique.
+
+## 5. Banc de test
+
+### 5.1 Fonctionnement du banc
+
+- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur en focntion du rayon des cylindres que nous utilisons. Le servomoteur permet de faire tourner le cilyndre choisi et donc notre d'enrouler notre jauge de contrainte autour de celui ci. Ce banc est autonome et permet une déformation moindre de notre jauge de contrainte.
+
+### 5.2 Code arduino
+
+- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle.
+
+## 6. Datasheet
+
+- [La datasheet] rédigé permet de comprendre les différentes caractéristiques de notre capteur. Veuillez la lire avant l'utilisation de celui ci. 
