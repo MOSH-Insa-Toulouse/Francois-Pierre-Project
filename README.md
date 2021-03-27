@@ -4,7 +4,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 
 ## Sommaire
 
-  - [1. Matériel requis](#1-matériel requis)
+  - [1. Matériel requis](#1-matériel-requis)
   - [2. Kicad](#2-kicad)
       - [2.1 Création des empreintes et des composants](#21-Création-des-empreintes-et-des-composants)
       - [2.2 Création du PCB](#22-Création-du-PCB)
@@ -19,16 +19,22 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 
 ## Matériel requis  
 
-- PCB shield 
-- Code Arduino gérant le capteur 
-- Application APK
+- Smartphone Androide 
+- Carte Arduino Uno 
+- Une plaque de cuivre pour shield. Ou bien des cables de connexions
+- Papier
+- Caryon de papier
+- Un module HC-05 (gestion du Bluetooth) [ici](https://fr.aliexpress.com/item/32496218488.html?src=google&albch=shopping&acnt=248-630-5778&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&albcp=11565796786&albag=115683794594&trgt=800756788306&crea=fr32496218488&netw=u&device=c&albpg=800756788306&albpd=fr32496218488&gclid=CjwKCAjwr_uCBhAFEiwAX8YJgRBUgtCF6S3dou6QC6xu91THwD-LvObxEluNS2bU644OLQE_p05mxxoCGZEQAvD_BwE&gclsrc=aw.ds)
+- Un écran OLED [ici](https://www.google.com/aclk?sa=l&ai=DChcSEwjiwND8ltHvAhVc6u0KHTwOD0wYABAGGgJkZw&sig=AOD64_0E9f4FFmKPCGubT07_igBVagq6Cw&ctype=5&q=&ved=2ahUKEwi72sj8ltHvAhUSmRQKHRkPB9IQ9aACegQIARBK&adurl=)
+- Un encodeur rotatif [ici](https://www.google.com/aclk?sa=l&ai=DChcSEwi_u8-dl9HvAhXC7e0KHZQrC94YABAEGgJkZw&sig=AOD64_0jWmans1feAKcjE1r1Iod4QknEqw&ctype=5&q=&ved=2ahUKEwi5kcadl9HvAhWl8uAKHZ9SAuUQ9aACegQIARBg&adurl=)
+- Deux pince crocodile en cuivre
 
 
-## Shield 
+## Kicad 
 
-Le Shield a été réaliser sur Kicad. Il sert à disposer tout nos composant sur la carte arduino sans utiliser de BradeBoard. Pour réaliser le shield nous avons d'abord duy réaliser la schématic du circuit sur Kicad. Comme la plus part de nos composant n'étais pas disponible sur les librairies de Kicad nous avons crée une libraire (voir Shield) qui contient les empreinte et schématic de tous nos composant.
+Kicad est un logiciel de conception pour l'électronique. Il permet de créer des schémas de circuit, visualiser des circuits en 3D, associer des empreintes au circuit. Dans notre cas, nous utilisons Kicad pour créer un shield pour notre carte Arduino Uno. Ce shield va nous permettre de monter nos composant directment sur la carte. Toute nos empreintes et plans de notre shield sont disponible dans [notre GIT](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Shield)  
 
-### Schématique et empreintes
+### 2.1 Création des empreintes et des composants
 
 ![Capteur](Images/Schematic_Capteur.PNG)
 ![Capteur](Images/Empreinte_Capteur.PNG)
