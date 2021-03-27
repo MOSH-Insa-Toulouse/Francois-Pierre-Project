@@ -4,8 +4,8 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 
 ## Sommaire
 
-  - [1. Matériel requis](#1-matériel-requis)
-  - [2. Kicad](#2-kicad)
+  - [1. Matériel requis](#1-Matériel-requis)
+  - [2. Kicad](#2-Kicad)
       - [2.1 Création des empreintes et des composants](#21-Création-des-empreintes-et-des-composants)
       - [2.2 Création du PCB](#22-Création-du-PCB)
   - [3. Code Arduino](#3-code-arduino)
