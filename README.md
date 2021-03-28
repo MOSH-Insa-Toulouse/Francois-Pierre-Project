@@ -101,6 +101,8 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 - Notre code a aussi une fonctionnalité qui enlève les variation trop importante de réstistance. En effet lors de nos tests notre téléphone recevait bien les valeurs affiché par le OLED, seulement nous avions aussi des valeurs intanpestives qui ne correspondaient pas à une mesure (entre 1 et 9). Pour pallier à ce problème,nous avons donc décider de ne pas prendre en compte les variations trop importantes.
 
 - Pour finir nous avons rajouté une fonctionalité qui permet à l'utilisateur de zoomer ou dezoomer sur la graphique.
+![Capteur](Images/Rescale.PNG)
+- *Code APK permettant de Rescale le graphique*
 
 ## 5. Banc de test
 
@@ -119,5 +121,5 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 ## 7. Contacte
 
 - Pour toute question concernant le capteur, l'application APK, le programme Arduino, le PCB ou pour tout complément d'information veuillez nous contacter par mail :
-- Pierre CLARET [pclaret@etud.insa-toulouse.fr]
-- François LEPETIT-AIMONT [lepetit-@etud.insa-toulouse.fr]
+- Pierre CLARET pclaret@etud.insa-toulouse.fr
+- François LEPETIT-AIMONT lepetit-@etud.insa-toulouse.fr
