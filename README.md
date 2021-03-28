@@ -17,7 +17,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
       - [5.2 Code arduino](#52-Code-arduino)
   - [6. Datasheet](#6-datasheet)
 
-## 1. Matériel requis  
+## Matériel requis  
 
 - Smartphone Androide 
 - Carte Arduino Uno [info](https://www.arduino-france.com/review/arduino-uno/)
@@ -31,7 +31,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
 - Un transistor LTC1050 [ici](https://www.reichelt.com/fr/fr/amplificateurs-op-rationnels-unique-2-5-mhz-dil-8-ltc-1050-cn8-p10921.html) 
 
 
-## 2. Kicad 
+## Kicad 
 
 Kicad est un logiciel de conception pour l'électronique. Il permet de créer des schémas de circuit, visualiser des circuits en 3D, associer des empreintes au circuit. Dans notre cas, nous utilisons Kicad pour créer un shield pour notre carte Arduino Uno. Ce shield va nous permettre de monter nos composant directment sur la carte. Toute nos empreintes et plans de notre shield sont disponible dans [notre GIT](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Shield)  
 
