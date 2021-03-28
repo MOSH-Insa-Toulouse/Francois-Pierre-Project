@@ -16,6 +16,7 @@ Projet de 4ème année Génie Physique, à l'INSA de Toulouse. Réalisation d'un
       - [5.1 Fonctionnement du banc](#51-Fonctionnement-du-banc)
       - [5.2 Code arduino](#52-Code-arduino)
   - [6. Datasheet](#6-datasheet)
+  - [7. Contacte](#6-Contacte)
 
 ## 1. Matériel requis  
 
@@ -114,3 +115,9 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 ## 6. Datasheet
 
 - [La datasheet] rédigé permet de comprendre les différentes caractéristiques de notre capteur. Veuillez la lire avant l'utilisation de celui ci. 
+
+## 7. Contacte
+
+- Pour toute question concernant le capteur, l'application APK, le programme Arduino, le PCB ou pour tout complément d'information veuillez nous contacter par mail :
+- Pierre CLARET [pclaret@etud.insa-toulouse.fr]
+- François LEPETIT-AIMONT [lepetit-@etud.insa-toulouse.fr]
