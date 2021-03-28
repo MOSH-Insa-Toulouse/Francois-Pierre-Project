@@ -120,7 +120,7 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ## 6. Datasheet
 
-- [La datasheet] rédigé permet de comprendre les différentes caractéristiques de notre capteur. Veuillez la lire avant l'utilisation de celui ci. 
+- [La datasheet](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/blob/main/Datasheet.pdf) rédigé permet de comprendre les différentes caractéristiques de notre capteur. Veuillez la lire avant l'utilisation de celui ci. 
 
 ## 7. Contacte
 
