@@ -104,6 +104,10 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 ![Capteur](Images/Rescale.PNG)
 - *Code APK permettant de Rescale le graphique*
 
+- La face avant de notre application permet de choisir un module Bluetooth auquel se connecter (Cadre rouge), puis de régler l'échelle (bleu), de visualiser la variation de résistance (marron), et d'avoir les valeurs de résistance et tension en temps réelle (vert).
+![Capteur](Images/Appli.jpg)
+- *Face avant de notre application*
+
 ## 5. Banc de test
 
 ### 5.1 Fonctionnement du banc
