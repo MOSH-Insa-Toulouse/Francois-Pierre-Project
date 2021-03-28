@@ -121,5 +121,5 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 ## 7. Contacte
 
 - Pour toute question concernant le capteur, l'application APK, le programme Arduino, le PCB ou pour tout complément d'information veuillez nous contacter par mail :
-- Pierre CLARET [pclaret@etud.insa-toulouse.fr]
-- François LEPETIT-AIMONT [lepetit-@etud.insa-toulouse.fr]
+- Pierre CLARET pclaret@etud.insa-toulouse.fr
+- François LEPETIT-AIMONT lepetit-@etud.insa-toulouse.fr
