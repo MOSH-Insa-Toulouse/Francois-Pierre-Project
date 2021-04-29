@@ -112,7 +112,10 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 5.1 Fonctionnement du banc
 
-- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur en focntion du rayon des cylindres que nous utilisons. Le servomoteur permet de faire tourner le cilyndre choisi et donc d'enrouler notre jauge de contrainte autour de celui ci. Ce banc est autonome et permet une déformation moindre de notre jauge de contrainte.
+- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. il suffit de le poser sur le socle et le cervo moteur vient activer une barre qui va plier la juage de contrainte 
+
+- ![Capteur](Images/socle.PNG)
+- ![Capteur](Images/barre.PNG)
 
 ### 5.2 Code arduino
 
