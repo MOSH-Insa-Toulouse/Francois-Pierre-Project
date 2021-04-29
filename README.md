@@ -112,14 +112,14 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 5.1 Fonctionnement du banc
 
-- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. il suffit de le poser sur le socle et le cervo moteur vient activer une barre qui va plier la juage de contrainte 
+- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. il suffit de le poser sur le socle et le cervo moteur vient activer une barre qui va plier la juage de contrainte. 
 
-- ![Capteur](Images/socle.PNG)
-- ![Capteur](Images/barre.PNG)
+- ![Capteur](Images/Socle.png)
+- ![Capteur](Images/Barre.png)
 
 ### 5.2 Code arduino
 
-- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle.
+- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur.
 
 ## 6. Datasheet
 
