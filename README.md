@@ -112,7 +112,7 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 5.1 Fonctionnement du banc
 
-- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. il suffit de le poser sur le socle et le cervo moteur vient activer une barre qui va plier la juage de contrainte. 
+- Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. il suffit de le poser sur le socle et le cervo moteur vient activer une barre qui va plier la juage de contrainte. Les fichier stl pour impression 3D sont [ici](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Banc%20de%20test)
 
 - ![Capteur](Images/Socle.png)
 - ![Capteur](Images/Barre.png)
