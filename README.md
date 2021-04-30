@@ -118,7 +118,7 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 - ![Capteur](Images/socle..png)
 - ![Capteur](Images/Barre.png)
-- 
+
 ### 5.2 Code arduino
 
 - Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens.
