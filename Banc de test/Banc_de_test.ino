@@ -116,18 +116,22 @@ void Affichage_Tension (double u)
 
 //Affiche la resistance
 
-void Affichage_Resistance (double r)
+void Affichage_Resistance (double r, double angle)
 {
   display.clearDisplay();
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
 
   display.setCursor(5, 0);
   display.println(F("Resistance"));
-  display.setCursor(0, 17);
+  display.setCursor(0, 10);
   display.println(r, 1);
-  display.setCursor(65, 17);
+  display.setCursor(65, 10);
   display.println(F("MOhms"));
+  display.setCursor(0, 20);
+  display.println(F("Angle"));
+  display.setCursor(30, 20);
+  display.println(angle,1);
   display.display();
 }
 
@@ -155,17 +159,17 @@ void setup()
 
 void loop()
 {
-  for(pos = 0; pos < 180; pos += 1)  // goes from 0 degrees to 180 degrees
-  {                                  // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+  for(pos = 0; pos < 180; pos += 10)  // Parcourt de 0 a 180 dergrès de 10 en 10
+  {                                  
+    myservo.write(pos);              
+    delay(1000);                       // Attend 1 seconde pour récupérer la valeur de la mesure
   }
-  for(pos = 180; pos>=1; pos-=1)     // goes from 180 degrees to 0 degrees
+  for(pos = 180; pos>=1; pos-=10)     
   {                                
-    myservo.write(pos);              // tell servo to go to position in variable �pos�
-    delay(15);                       // waits 15ms for the servo to reach the position
+    myservo.write(pos);              
+    delay(1000);                       
   }
-  display(SSD1306_SETCONTRAST);                   // 0x81
+  display(SSD1306_SETCONTRAST);                   
   ssd1306_command(0x8F);
   Voltage = analogRead(analog_port) * 5.0 / 1024.0; //Tension sur 5V et 8bits
   resistance = (1 + 100) * 100000 * (5 / Voltage) - 100000 - 10000;//Calcule de la résistance
@@ -179,7 +183,7 @@ void loop()
     Un nombre pair d'appuie on affiche la résistance, un nombre impaire la tension*/
   if (!(readSw() == 0)) {
     if (readSw() % 2 == 0) {
-      Affichage_Resistance(resistance / 1000000);
+      Affichage_Resistance(resistance / 1000000, pos);
     } else if (readSw() % 2 == 1) {
       Affichage_Tension (Voltage) ;
     }
