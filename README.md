@@ -119,6 +119,8 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 - ![Capteur](Images/socle..png)
 - ![Capteur](Images/Barre.png)
 
+- A l'inverse du banc de test initiale celui que nous avons immaginé n'a pas un rayon de courbure définis et connus. En revanche il est possible de connaitre le rayon de courbure avec la flèche F la distance S et R
+
 ### 5.2 Code arduino
 
 - Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens.
