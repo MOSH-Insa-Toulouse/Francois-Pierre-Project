@@ -41,7 +41,8 @@ bool swLast  = HIGH;
 int rotVal = 0;
 
 Servo myservo;
-int pos = 0;   
+int pos = 0;
+int rayon=0;
 
 //Retourne la position de l'encodeur
 int readPos() {
@@ -116,7 +117,7 @@ void Affichage_Tension (double u)
 
 //Affiche la resistance
 
-void Affichage_Resistance (double r, double angle)
+void Affichage_Resistance (double r, double rayon)
 {
   display.clearDisplay();
   display.setTextSize(1);
@@ -129,9 +130,9 @@ void Affichage_Resistance (double r, double angle)
   display.setCursor(65, 10);
   display.println(F("MOhms"));
   display.setCursor(0, 20);
-  display.println(F("Angle"));
+  display.println(F("Rayon"));
   display.setCursor(30, 20);
-  display.println(angle,1);
+  display.println(rayon,1);
   display.display();
 }
 
@@ -161,14 +162,8 @@ void loop()
 {
   for(pos = 0; pos < 180; pos += 10)  // Parcourt de 0 a 180 dergrès de 10 en 10
   {                                  
-    myservo.write(pos);              
-    delay(1000);                       // Attend 1 seconde pour récupérer la valeur de la mesure
-  }
-  for(pos = 180; pos>=1; pos-=10)     
-  {                                
-    myservo.write(pos);              
-    delay(1000);                       
-  }
+  myservo.write(pos); 
+  delay(1000);
   display(SSD1306_SETCONTRAST);                   
   ssd1306_command(0x8F);
   Voltage = analogRead(analog_port) * 5.0 / 1024.0; //Tension sur 5V et 8bits
@@ -177,18 +172,48 @@ void loop()
   Serial.print(",");//séparateur entre la valeur de tension et de résistance
   Serial.print(Voltage);//envoie de la valeur de la tension par le module bluetooth
   Serial.print(";");//séparateur entre 2 mesures
+  rayon = (5/2)*sin(pos);
   
 
   /*Dès qu'on appuie sur l'encodeur on bascule sur l'affichage tension ou résistance
     Un nombre pair d'appuie on affiche la résistance, un nombre impaire la tension*/
   if (!(readSw() == 0)) {
     if (readSw() % 2 == 0) {
-      Affichage_Resistance(resistance / 1000000, pos);
+      Affichage_Resistance(resistance / 1000000, rayon);
+    } else if (readSw() % 2 == 1) {
+      Affichage_Tension (Voltage) ;
+    }
+  }
+ 
+  }
+  for(pos = 180; pos>=1; pos-=10)     
+  {                                
+  myservo.write(pos);
+  delay(1000); 
+  display(SSD1306_SETCONTRAST);                   
+  ssd1306_command(0x8F);
+  Voltage = analogRead(analog_port) * 5.0 / 1024.0; //Tension sur 5V et 8bits
+  resistance = (1 + 100) * 100000 * (5 / Voltage) - 100000 - 10000;//Calcule de la résistance
+  Serial.print(resistance / 1000000); //envoie de la valeur de la résistance par le module bluetooth
+  Serial.print(",");//séparateur entre la valeur de tension et de résistance
+  Serial.print(Voltage);//envoie de la valeur de la tension par le module bluetooth
+  Serial.print(";");//séparateur entre 2 mesures
+  rayon = (5/2)*sin(pos);
+  
+
+  /*Dès qu'on appuie sur l'encodeur on bascule sur l'affichage tension ou résistance
+    Un nombre pair d'appuie on affiche la résistance, un nombre impaire la tension*/
+  if (!(readSw() == 0)) {
+    if (readSw() % 2 == 0) {
+      Affichage_Resistance(resistance / 1000000, rayon);
     } else if (readSw() % 2 == 1) {
       Affichage_Tension (Voltage) ;
     }
   }
 
+                         
+  }
+  
   display.clearDisplay();
   delay(5);
 
