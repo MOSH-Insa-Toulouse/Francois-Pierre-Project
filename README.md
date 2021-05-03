@@ -123,7 +123,10 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 5.2 Code arduino
 
-- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens.
+- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens. Etant donnée que dans notre cas nous ne connaissons pas le rayon de courbure nous devons le calculer. Ceci est possible celon la manière suivante : 
+
+- ![Capteur](Images/Calcule rayon.png)
+
 
 ## 6. Datasheet
 
