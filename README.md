@@ -116,12 +116,17 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 - Le banc de test que nous avons imaginé permet de mesurer la déformation du capteur sans avoir à le toucher. Il est constitué de deux partie, le socle et la barre . Le cervo moteur vient se positionner dans l'extrusion de la barre. Le disque présent sur l'autre coté vient lui se placer dans l'encoche du socle. les pince crocodile ainsi que la jauge sont immobile grace à l'encadrement dans lequel ils viennent s'incérer. Le cervo moteur vient donc faire tourner la barre de bas en haut et nous récupérons les valeur de résistances sur le terminale ou dans le fichier txt de notre téléphone.
 
-- ![Capteur](Images/Socle.png)
+- ![Capteur](Images/socle..png)
 - ![Capteur](Images/Barre.png)
-- 
+
+- A l'inverse du banc de test initiale celui que nous avons immaginé n'a pas un rayon de courbure définis et connus. En revanche il est possible de connaitre le rayon de courbure avec la flèche F la distance S et R
+
 ### 5.2 Code arduino
 
-- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens.
+- Le code arduino qui gérent le banc de test permet d'afficher la résistance et la déformation en temps réelle. Il fait aussi s'activer le cervo moteur, qui va bouger sur une rotation de 180 degrès. cela nous permet de plier la jauge dans les deux sens. Etant donnée que dans notre cas nous ne connaissons pas le rayon de courbure nous devons le calculer. Ceci est possible celon la manière suivante : 
+
+- ![Capteur](Images/Calcule rayon.png)
+
 
 ## 6. Datasheet
 
