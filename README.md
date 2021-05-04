@@ -85,7 +85,7 @@ Kicad est un logiciel de conception pour l'électronique. Il permet de créer de
 
 ### 3.2 Le code
 
-- [Le code arduino](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Capteur_Graphene) permet de gérer le capteur. Il récupère sur la pin analogique A0 la valeur de la tension du capteur. Grace à une analyse du circuit éléctronique, nous pouvons déterminer la résistance en fonction de cette tension. Le code affiche sur un écran OLED différents menus en fonction de si l'on appuie ou non sur l'encodeur rotatoir. Il y a un delay de 5ms entre chaque lecture analogique.
+- [Le code arduino](https://github.com/MOSH-Insa-Toulouse/Francois-Pierre-Project/tree/main/Code-Capteur-Graphite) permet de gérer le capteur. Il récupère sur la pin analogique A0 la valeur de la tension du capteur. Grace à une analyse du circuit éléctronique, nous pouvons déterminer la résistance en fonction de cette tension. Le code affiche sur un écran OLED différents menus en fonction de si l'on appuie ou non sur l'encodeur rotatoir. Il y a un delay de 5ms entre chaque lecture analogique.
 
 ![Capteur](Images/Affiche_Resistance.jpg)
 ![Capteur](Images/Affiche_Tension.jpg)
